@@ -15,14 +15,16 @@ const SplashScreen = ( props ) => {
             source={require('../img/bg/Amiens2.png')}
         >
 
-            <View style={{ width: '92%', backgroundColor: '#E21232dd', padding: 10, marginBottom: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 10, elevation: 5}} >
-                <Image
-                    style={{ height: '40%', width: '80%', resizeMode: 'contain', opacity: 0.9, }}
-                    source={require('../img/icon/mapWhite.png')} 
-                />
-                <Text style={{ fontSize: 90 , color: 'white'}}>WHAT</Text>
-                <Text style={{ fontSize: 50, color: 'white'}}>AROUND ?!</Text>
-            </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Home')}>
+                <View style={{ backgroundColor: '#E21232dd', padding: 10, marginBottom: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 10, elevation: 5}} >
+                    <Image
+                        style={{ height: '40%', width: '80%', resizeMode: 'contain', opacity: 0.9 }}
+                        source={require('../img/icon/mapWhite.png')} 
+                    />
+                    <Text style={{ fontSize: 90 , color: 'white'}}>WHAT</Text>
+                    <Text style={{ fontSize: 50, color: 'white'}}>AROUND ?!</Text>
+                </View>
+            </TouchableOpacity>
 
             <View style={{ flexDirection: 'row', backgroundColor: '#E21232', borderRadius: 10, marginHorizontal: '4%', elevation: 5 }}>
                     

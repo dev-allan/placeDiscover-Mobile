@@ -1,0 +1,14 @@
+com/placediscover/MainApplication.java
+ com.placediscover.MainApplication
+ com.placediscover.MainApplication$1
+com/placediscover/BuildConfig.java
+ com.placediscover.BuildConfig
+com/placediscover/MainActivity.java
+ com.placediscover.MainActivity
+com/placediscover/ReactNativeFlipper.java
+ com.placediscover.ReactNativeFlipper
+ com.placediscover.ReactNativeFlipper$1
+ com.placediscover.ReactNativeFlipper$2
+ com.placediscover.ReactNativeFlipper$2$1
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

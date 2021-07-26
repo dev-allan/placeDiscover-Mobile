@@ -8,6 +8,7 @@ MapboxGL.setAccessToken("sk.eyJ1IjoibGVuZGVzeiIsImEiOiJja3FrcDlzbzYzc2lpMnBtdngx
 
 import Slider from '@react-native-community/slider';
 
+import Icon from 'react-native-vector-icons/dist/AntDesign';
 
 const defaultVehiculesFilters = [
     {type: 'walk', selected: true},
@@ -160,7 +161,7 @@ const FilterScreen = ( props ) => {
             }
 
             
-            { selectedItem ?
+{ selectedItem !== null && toggleCatMenu === false && toggleFilterMenu === false ?
                 <View style={{ position: 'absolute', bottom: '17%', width: '95%', justifyContent: 'center', alignItems: 'center',  }}>
                     <View style={{ flexDirection: 'row', width: '100%', backgroundColor: '#fffd', borderRadius: 5, padding: 8, elevation: 3}}>
                         <View style={{ flex: 2, }}>
@@ -176,7 +177,12 @@ const FilterScreen = ( props ) => {
                             }
                         </View>
                         <View style={{ flex: 3, paddingLeft: 10, }}>
-                            <Text numberOfLines={1} style={{ flex: 1, fontSize: 18, fontWeight: 'bold', color: '#E21232', paddingTop: 5 }}>{(selectedItem.alias).replace('-', ' ')}</Text>
+                            <View style={{flexDirection:"row"}}>
+                                <Text numberOfLines={1} style={{ flex: 1, fontSize: 18, fontWeight: 'bold', color: '#E21232', paddingTop: 5 }}>{(selectedItem.alias).replace('-', ' ')}</Text>
+                                <TouchableOpacity onPress={() => setSelectedItem(null)}>
+                                        <Icon name="closecircle" size={25} color="red" />
+                                </TouchableOpacity>
+                            </View>
                             <View style={{ flex: 4, }}>
                                 <Text style={{ flex: 1, fontSize: 16, color: '#444', }}>{selectedItem.phone}</Text>
                             </View>
