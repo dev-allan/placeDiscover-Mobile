@@ -28,7 +28,7 @@ const SplashScreen = ( props ) => {
                     }
                 ]}>
                 <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                    <View style={{ backgroundColor: '#E21232dd', padding: 10, marginBottom: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 10, elevation: 5 }} >
+                    <View style={{ backgroundColor: '#E21232dd', padding: 10, marginBottom: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 10, elevation: 5, width:'80%', marginLeft: 'auto', marginRight: 'auto' }} >
                         <Image
                             style={{ height: '40%', width: '80%', resizeMode: 'contain', opacity: 0.9 }}
                             source={require('../img/icon/mapWhite.png')}
