@@ -7,12 +7,12 @@ const SplashScreen = ( props ) => {
     const fadeAnim = useRef(new Animated.Value(0)).current;
     const { navigation } = props;
 
-        // Will change fadeAnim value to 1 in 5 seconds
-        Animated.timing(fadeAnim, {
-          toValue: 1,
-          duration: 1000,
-          useNativeDriver: false 
-        }).start();
+    // Configuration de l'animation, apparition en fondu du logo et du menu
+    Animated.timing(fadeAnim, {
+        toValue: 1,
+        duration: 1000,
+        useNativeDriver: false
+    }).start();
 
     return (
 
@@ -23,7 +23,6 @@ const SplashScreen = ( props ) => {
             <Animated.View
                 style={[
                     {
-                        // Bind opacity to animated value
                         opacity: fadeAnim
                     }
                 ]}>
@@ -37,17 +36,6 @@ const SplashScreen = ( props ) => {
                         <Text style={{ fontSize: 50, color: 'white' }}>AROUND ?!</Text>
                     </View>
                 </TouchableOpacity>
-
-                {/* <TouchableOpacity onPress={() => navigation.navigate('Home')}>
-                <View style={{ backgroundColor: '#E21232dd', padding: 10, marginBottom: 30, justifyContent: 'center', alignItems: 'center', borderRadius: 10, elevation: 5}} >
-                    <Image
-                        style={{ height: '40%', width: '80%', resizeMode: 'contain', opacity: 0.9 }}
-                        source={require('../img/icon/mapWhite.png')} 
-                    />
-                    <Text style={{ fontSize: 90 , color: 'white'}}>WHAT</Text>
-                    <Text style={{ fontSize: 50, color: 'white'}}>AROUND ?!</Text>
-                </View>
-            </TouchableOpacity> */}
 
                 <View style={{ width : '90%', flexDirection: 'row', backgroundColor: '#E21232', borderRadius: 10, marginHorizontal: '4%', elevation: 5 }}>
 
