@@ -16,7 +16,6 @@ const defaultVehiculesFilters = [
     {type: 'car', selected: false}
 ];
 
-
 const FilterScreen = ( props ) => {
 
     const { navigation, route, currentPosition, search } = props
@@ -31,18 +30,14 @@ const FilterScreen = ( props ) => {
     const [ aroundData, setAroundData ] = useState([]); // résulta recherche sur yelp
 
     const [ selectedItem, setSelectedItem ] = useState(null)
-    
-
-    console.log('filter', search)
-
 
     const toggleFilter = ( current ) => {
-        
         let newFilters = catFilters.map( element => {
             
             if(element.cat == current) {
                 element.selected = !element.selected
             }
+
             return element
         })
 
