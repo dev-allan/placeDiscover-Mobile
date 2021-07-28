@@ -46,30 +46,6 @@ const HomeScreen = ( props ) => {
 
         <View style={styles.container} >
 
-            { currentPosition == null ?
-                <SplashScreen />
-                :
-                <MapboxGL.MapView
-                    styleURL={MapboxGL.StyleURL.Street}
-                    zoomLevel={16}
-                    animated={true}
-                    pitch={50}
-                    centerCoordinate={[currentPosition.lon, currentPosition.lat]}
-                    showUserLocation={true}
-                    style={{flex: 1, height: '100%', width: '100%', tintColor: 'gray' }}>
-                        <MapboxGL.Camera
-                            zoomLevel={12}
-                            centerCoordinate={[currentPosition.lon, currentPosition.lat]}
-                        />
-                        <MapboxGL.UserLocation 
-                            showsUserHeadingIndicator={true}
-                            animationMode={'flyTo'}
-                            animationDuration={0.5}
-                        />
-
-                </MapboxGL.MapView>
-            }
-
             { toggleMenu ? 
 
                 <View style={{ position: 'absolute', top: '2%', width: '100%', height: '84%', backgroundColor: '#fff0', justifyContent: 'center', borderRadius: 24, paddingHorizontal: 5 }}>
@@ -243,16 +219,6 @@ const HomeScreen = ( props ) => {
                         onPress={() => navigation.navigate('Filter', { actualFilters: catFilters})}
                     >
                         <Text style={{ fontSize: 16, fontWeight: 'bold', color: '#fff', backgroundColor: '#E21232', paddingVertical: 10, paddingHorizontal: 15, borderRadius: 10 }}>maintenant</Text>
-                    </TouchableOpacity>
-
-                    <TouchableOpacity
-                        style={{ flex: 1, justifyContent: 'center', alignItems: 'center', }}
-                        onPress={() => setToggleMenu(!toggleMenu)}
-                    >
-                        <Image
-                            style={{ height: 18, width: 18, resizeMode: 'contain'}}
-                            source={require('../img/icon/menuWhite.png')}
-                        />
                     </TouchableOpacity>
 
                     <TouchableOpacity

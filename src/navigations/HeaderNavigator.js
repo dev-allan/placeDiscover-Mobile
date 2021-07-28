@@ -19,6 +19,10 @@ const HeaderNavigator = ( props ) => {
             return null
             break
 
+        case 'Home':
+            return null
+            break
+
         default:
             return ( <MyHeader route={route} navigation={navigation} setSearch={setSearch} /> )
             break
